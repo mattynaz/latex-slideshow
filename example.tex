@@ -1,8 +1,9 @@
 \documentclass{slideshow}
 
-\title{How to Create Elegant \LaTeX{ } Slideshows}
+\title{How to Create Elegant \LaTeX{ }Slideshows}
 \subtitle{a tutorial on the \texttt{slideshow} document class}
-\author{
+\author
+{
   Matthew Nazari \\
   \textit{Department of Computer Science} \\
   \textit{Harvard University} \\
@@ -19,31 +20,29 @@
 \conference{Harvard University}
 
 \begin{document}
-\slide[Title Slide]
-The title slide is automatically created. \par
-It supports
-\begin{itemize}
-  \item \verb|\title{}|
-  \item \verb|\subtitle{}|
-  \item \verb|\author{}|
-  \item \verb|\conference{}|
-  \item \verb|\date{}|
-\end{itemize}
+  \slide[Title Slide]
+  The title slide is automatically created. \par
+  It supports
+  \begin{itemize}
+    \item \verb|\title{}|
+    \item \verb|\subtitle{}|
+    \item \verb|\author{}|
+    \item \verb|\conference{}|
+    \item \verb|\date{}|
+  \end{itemize}
 
-\headerslide[Header Slides]{Create a Header Slide With\par {\normalfont\Large\texttt{\textbackslash headerslide[optional PDF bookmark name]\{Slide Title\}}}}
+  \headerslide[Header Slides]{Create a Header Slide With\par {\normalfont\Large\texttt{\textbackslash headerslide[optional PDF bookmark name]\{Slide Title\}}}}
 
-\slide[Slides]
-You create a new slide using \verb|\slide[Slide Title]|. \par
-This will create PDF bookmark with the name of the slide title.
+  \slide[Slides]
+  You create a new slide using \verb|\slide[Slide Title]|. \par
+  This will create PDF bookmark with the name of the slide title.
 
-\slide[Subslides]
-This is slide \theslide.
-\label{subslide}
+  \slide[Subslides]
+  This is slide \theslide.
+  \label{subslide}
 
-\slide
-This is slide \theslide. \par
-Notice that it is a subslide of \autoref{subslide}. \par
-You create a subslide using \verb|\slide|, by not passing a slide title argument.
-
-
+  \slide
+  This is slide \theslide. \par
+  Notice that it is a subslide of \autoref{subslide}. \par
+  You create a subslide using \verb|\slide|, by not passing a slide title argument.
 \end{document}
