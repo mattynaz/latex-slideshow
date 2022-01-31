@@ -97,6 +97,7 @@
 \newcommand{\headerslide}[2][]
 {
   \slide
+  \refstepcounter{slide}
   \vspace*{\fill}
   \begin{center}
     \@ifempty{#1}{}
