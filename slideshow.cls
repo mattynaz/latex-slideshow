@@ -11,6 +11,7 @@
 \RequirePackage[colorlinks=true, allcolors=magenta]{hyperref}
 \RequirePackage{fancyhdr}
 \RequirePackage{bookmark}
+\RequirePackage{enumitem}
 
 
 % Slide and subslide counters
@@ -18,7 +19,7 @@
 \newcounter{slide}
 \newcounter{subslide}[slide]
 \newcommand*\slideautorefname{slide}
-\newcommand*\subslideautorefname{slide}
+\newcommand*\subslideautorefname{subslide}
 \renewcommand*\theslide{\arabic{slide}\alph{subslide}}
 \renewcommand*\thesubslide{\arabic{slide}\alph{subslide}}
 
@@ -101,9 +102,9 @@
   \begin{center}
     \@ifempty{#1}{}
     {
-    \pdfbookmark{#1}{#1}
+      \pdfbookmark{#1}{#1}
     }
-    \bfseries\huge #2
+    {\bfseries\Huge #2}
   \end{center}
   \vspace*{\fill}
 }
@@ -114,17 +115,20 @@
 {
   % page style options
   \Large
-  \setlength\parindent{0pt}
+  \setlength\parindent{0em}
+  \setlength\parskip{1em}
+  \setlist[itemize]{itemsep=0.5\parskip, topsep=-0.5\parskip}
+  \setlist[enumerate]{itemsep=0.5\parskip, topsep=-0.5\parskip}
 
   % title slide
   \pdfbookmark{Title}{title}
   \@showtitlehdrs
   \vspace*{\fill}
   \begin{center}
-    {\bfseries\huge \@title}
+    {\bfseries\Huge \@title}
     \@ifdefined{@subtitle}
     {
-      \par\vspace{0.15in}
+      \par\vspace{0.25in}
       {\LARGE \@subtitle}
     }{}
     \par\vspace{0.5in}
