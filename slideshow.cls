@@ -18,8 +18,7 @@
 % (added support for autoref command from hyperref)
 \newcounter{slide}
 \newcounter{subslide}[slide]
-\newcommand*\slideautorefname{slide}
-\newcommand*\subslideautorefname{subslide}
+\newcommand*\subslideautorefname{slide}
 \renewcommand*\theslide{\arabic{slide}\alph{subslide}}
 \renewcommand*\thesubslide{\arabic{slide}\alph{subslide}}
 
@@ -128,7 +127,7 @@
     {\bfseries\Huge \@title}
     \@ifdefined{@subtitle}
     {
-      \par\vspace{0.25in}
+      \par\vspace{0.15in}
       {\LARGE \@subtitle}
     }{}
     \par\vspace{0.5in}
